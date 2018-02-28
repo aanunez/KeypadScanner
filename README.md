@@ -30,11 +30,18 @@ The keypad interpreter module has three outputs and one input,
 **Inputs**
 * KeyRead must be asserted high for the scanner to continue. The KeyRead signal may only stay high for 8ms at most, it is recommended that the signal not remain high for longer than 4ms.
 
+Issues
+------
+
+I have been contacted a handful of times regarding the use of the "waitbit" in the scanner module and its purpose. Unfortunately I recall only that it was needed on my board, I do not recall why. I would like to remove it, but as I do not have a board to actually test with I am reluctant to do so. I'm afraid I can't be more descriptive than that.
+
+
 Contact
 -------
 If you have questions, concerns, or comments please feel free to contact me via 
 
     adam.a.nunez@gmail.com
+	
 License
 -------
 Copyright (C) 2014  Adam Nunez
