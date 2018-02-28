@@ -17,10 +17,8 @@ input Reset,
 output reg Out
 );
 
-// This module accepts 1 input,
-// plus a clock and returns 1
-// on output after 25000 clock
-// cycles have passed.
+// This module accepts 1 input plus a clock and returns 1
+// on output after 25000 clock cycles have passed.
 
 reg [14:0] LFSR;
 

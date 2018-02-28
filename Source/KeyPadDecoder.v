@@ -13,18 +13,16 @@
 
 module KeyPadDecoder(
 input [3:0] In, 
-output reg [6:0] Out
+output reg [3:0] Out
 );
    
-// This module accepts as input
-// a four bit value that describes
-// the row col vector and decodes
-// into the value at that location
-// for a 4 by 4 matrix keypad with
-// layout ...    1 2 3 A
-//				 4 5 6 B
-//				 7 8 9 C
-//				 * 0 # D				
+// This module accepts as input a four bit value that describes
+// the row col vector and decodes into the value at that location
+// for a 4 by 4 matrix keypad with layout ...   
+// 1 2 3 A
+// 4 5 6 B
+// 7 8 9 C
+// * 0 # D				
    
 always @(In) begin
 	case (In)

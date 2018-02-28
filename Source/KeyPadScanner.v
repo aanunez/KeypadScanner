@@ -23,16 +23,11 @@ output reg KeyRdy,
 input KeyRd
 );
 
-// This module assumes a 8 pin
-// 4 by 4 matrix keypad is connected
-// with its input pins on ColOut
-// and output pin on RowIn. The
-// Scanner flips through columns on
-// the key pad checking if a key is
-// depressed, when one is found the
-// KeyRdy signal is set high, the
-// key data is placed on RowColVector
-// and the scanner waits for KeyRd
+// This module assumes an 8-pin 4 by 4 matrix keypad is connected
+// with its input pins on ColOut and output pin on RowIn. The
+// Scanner flips through columns on the key pad checking if a key is
+// depressed, when one is found the KeyRdy signal is set high, the
+// key data is placed on RowColVector and the scanner waits for KeyRd
 // to continue scanning.
 
 parameter Scan=2'b00, Calculate=2'b01, Analyize=2'b10, WaitForRead=2'b11;
