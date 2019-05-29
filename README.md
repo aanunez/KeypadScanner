@@ -30,11 +30,16 @@ The keypad interpreter module has three outputs and one input,
 **Inputs**
 * KeyRead must be asserted high for the scanner to continue. The KeyRead signal may only stay high for 8ms at most, it is recommended that the signal not remain high for longer than 4ms.
 
-Issues
+FYI
 ------
 
-I have been contacted a handful of times regarding the use of the "waitbit" in the scanner module and its purpose. Unfortunately I recall only that it was needed on my board, I do not recall why. I would like to remove it, but as I do not have a board to actually test with I am reluctant to do so. I'm afraid I can't be more descriptive than that.
+Below are issues that some folks have been kind enough to point out, I have not implimented them as I have no way to test and verify them.
 
+* On the decoder unit, the out variable is set to 7 bit lengths but only 4 bits are used.
+
+* It has been confired that the "waitbit" is needed. While I poorly (read: didn't) document what it is for, I am told that it insures that keypresses are recognized at the right time. I'm sure testing with the variable always set high will reveal make it clear to anyone with a dev board and keypad.
+
+* Tested on Intel DK-DEV-4CGX150N, Artyv s7, and others.
 
 Contact
 -------
